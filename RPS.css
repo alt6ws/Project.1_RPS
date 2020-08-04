@@ -1,0 +1,387 @@
+body {
+    background-image: linear-gradient(to bottom left, rgb(29, 29, 104), rgb(83, 30, 30));
+    display: grid;
+    position: relative;
+}
+/* ruleset overlay */
+    #rulesetoverlay {
+        display:flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.8);
+    }
+    #rulesetoverlay p {
+        font-size: 30px;
+        font-weight: 800;
+        color: white;
+        text-decoration: underline rosybrown;
+    }
+
+    #rulesetscont {
+        display: grid;
+        position: relative;
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(2, auto);
+        height: 520px;
+        width: 350px;
+        background-image: linear-gradient(to bottom left, lightcoral, rgb(65, 117, 214));
+        border: 4px solid mediumpurple;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #closegametype {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        border-radius: 4px;
+        color: rgb(110, 37, 37);
+        font-weight: 700;
+        font-size: 15px;
+        display: none;
+    }
+    #closegametype:hover {
+        cursor: pointer;
+    }
+    #rulesetscont .rulesets {
+        height: 80px;
+        width: 120px;
+        padding: 4px;
+        margin: 8px;
+        background-color: lemonchiffon;
+        box-shadow: 2px 2px 4px black;
+        border: 2px solid rgba(17, 13, 94, 0.8);
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        font-style: italic;
+    }
+    #rulesetscont .rulesets:hover {
+        background-color: rgb(219, 178, 75);
+        border: 3px solid rgb(8, 5, 71);
+        border-radius: 12px;
+    }
+    #rulesetscont input {
+        margin: 8px;
+        width: 34px;
+        margin-left: 0;
+        padding: 4px;
+        height: 60px;
+        background-color: lemonchiffon;
+        box-shadow: 2px 2px 2px black;
+        border-radius: 9px;
+        font-size: 14px;
+    }
+    .customroundsdiv, .customscorediv {
+        grid-column: span 2;
+        justify-self: center;
+    }
+
+/* end of game overlay */
+
+    #endofgameoverlay {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.8);
+    }
+    #endofgamecont {
+        display: grid;
+        grid-template-rows: repeat(2, 150px) 200px;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+        width: 340px;
+        justify-content: center;
+        align-items: center;
+        background-image:linear-gradient(to top right, rgb(252, 138, 138), rgb(50, 109, 219));
+        border: 5px solid mediumpurple;
+    }
+    #didyouwin {
+        font-size: 2.6rem;
+        text-shadow: 5px 5px 4px mediumpurple;
+        color: rgb(133, 62, 37);
+        grid-column: span 2;
+        font-family: 'Kalam';
+    }
+    #finalscore {
+        grid-column: span 2;
+        color: rgb(54, 31, 31);
+        font-family: 'Merienda';
+    }
+    #finalscoreresult {
+        font-size: 1.7rem;
+        background-color: rgba(141, 13, 94, 0.507);
+        border-radius: 6px;
+    }
+    #endofgamecont button {
+        height: 70px;
+        border-radius: 10px;
+        box-shadow: 3px 4px 4px rgb(92, 92, 145);
+        background-color: rgba(255, 228, 181, 0.733);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1.15rem;
+        font-style: italic;
+        color: rgb(75, 30, 117);
+        text-shadow: 1px 1px rgb(212, 156, 191)
+    }
+    #endofgamecont button:hover {
+        background-color: rgb(255, 249, 218);
+        box-shadow: 5px 6px 4px rgb(92, 92, 145);
+    }
+    #playagain {
+        cursor: pointer;
+
+    }
+    #playsomethingelse {
+        cursor: pointer;
+    }
+
+/* big boy container */
+
+    #jankentime {
+        display:grid;
+        grid-template-rows: 1fr 5fr;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        min-width: 350px;
+        max-width: 80vw;
+        height: 98vh;
+        border-radius: 12px;
+        border: 3px solid mediumpurple;
+        background-image: linear-gradient(to bottom right, rgb(172, 177, 165) 0%, rgb(184, 116, 123) 50%, rgb(112, 64, 209) 100%);
+}
+
+/* header */
+
+    #header {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    #header h3 {
+        font-weight: 900;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.6rem;
+        margin-top: 40px;
+        color: rgb(95, 0, 79);
+    }
+    #header h1 {
+        background-color: #f3ec78;
+        background-image: linear-gradient(90deg, #531abd 0%, #2499bd 50%, #880661 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+/* playarea */
+
+    #playarea {
+        display: grid;
+        grid-template-rows: 0.6fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "janken janken"
+        "player computer";
+        }
+
+/* score/ruleset/round */
+
+        #roundjanken {
+            border-bottom: 4px solid rgba(0, 1, 54,0.5);
+            grid-area: janken;
+            text-align: center;
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto;
+            align-items: center;
+        }
+        #roundjanken .jankenbuttons {
+            margin-left: 2vw;
+            font-weight: 540;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            background-color: rgb(189, 189, 247);
+            border: 2px solid rgb(105, 105, 175);
+            padding: 3px;
+            height: 55px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px rgb(60, 60, 85);
+            justify-self: start;
+        }
+        #navother {
+            font-weight: 540;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            background-color: rgb(189, 189, 247);
+            border: 2px solid rgb(105, 105, 175);
+            padding: 3px;
+            height: 55px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px rgb(60, 60, 85);
+            justify-self: end;
+            margin-right: 2vw;
+        }
+        #roundjanken #score, #roundnumber {
+            grid-column: span 2;
+        }
+        #roundnumber {
+            color: rgb(17, 42, 43);
+            justify-self: center;
+            border: 3px solid rgb(58, 52, 107);
+            font-family: 'Gruppo';
+            font-size: 23px;
+            border-radius: 7px;
+            padding: 3px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        #playerspan, #computerspan {
+            line-height: 30px;
+            font-family: 'Merienda';
+            font-size: 16px;
+        }
+        #playerScore, #computerScore {
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+        #scoreplayer {
+            color: rgb(84, 46, 173);
+            font-size: 22px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        }
+        #scorecomputer {
+            color: rgb(121, 187, 196);
+            text-shadow: 1px 1px 1px black;
+            font-size: 22px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        }
+
+/* buttons containers */
+
+        #buttonsplayercontainer, #buttonscomputercontainer {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "a b c"
+            "d e f"
+            "g h i";
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* classes for color */
+
+        .win {
+            background-color: rgb(93, 145, 16) !important;
+        }
+        .lose {
+            background-color: rgb(207, 18, 18) !important;
+        }
+        .tie {
+            background-color: rgba(44, 42, 189, 0.651) !important;
+        }
+        .hide {
+            display: none;
+        }
+        /* left button container */
+
+        #buttonsplayercontainer {
+            grid-area: player;
+            padding-right: 20px;
+            border-right: 3px solid rgba(0, 1, 54,0.5);
+        }
+
+        /* player buttons */
+
+            #buttonsplayercontainer button {
+                border-radius: 50%;
+                border: 4px solid rgb(139, 103, 196);
+                background-color: transparent;
+                width: 88px;
+                height: 88px;
+            }
+            .playerRock {
+                background-image: url("rock.png");
+                background-size: cover;
+                grid-area: c;
+            }
+            .playerRock:focus, .playerPaper:focus, .playerScissors:focus {
+                outline: 0;
+            }
+            .playerRock:hover, .playerPaper:hover, .playerScissors:hover {
+                cursor: pointer;
+                box-shadow: 5px 5px 8px rgb(55, 29, 116);
+            }
+            .playerPaper {
+                background-image: url("paper.png");
+                background-size: cover;
+                grid-area: e;
+                justify-self: end;
+            }
+            .playerScissors {
+                background-image: url("scissors.png");
+                background-size: cover;
+                grid-area: i;
+            }
+
+        /* right button container  */
+
+        #buttonscomputercontainer {
+            grid-area: computer;
+            padding-left: 20px;
+            border-left: 3px solid rgba(0, 1, 54,0.5);
+        }
+
+        /* computer buttons */
+
+            .computerRock {
+                grid-area: a;
+                justify-self: end;
+            }
+            .computerPaper {
+                grid-area: e;
+                justify-self: start;
+            }
+            .computerScissors {
+                grid-area: g;
+                justify-self: end;
+            }
+        #buttonscomputercontainer img {
+            border-radius: 50%;
+            border: 4px solid rgb(121, 187, 196);
+            width: 80px;
+            height: 80px;
+        }
+
+        /* media queries */
+
+        @media screen and (max-width: 700px) {
+            #buttonsplayercontainer button {
+                width: 15vw;
+                height: 15vw;
+            }
+            #buttonscomputercontainer img {
+                width: 13vw;
+                height: 13vw;
+            }
+        }
