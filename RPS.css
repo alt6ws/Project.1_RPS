@@ -321,9 +321,20 @@ body {
                 height: 88px;
             }
             .playerRock {
-                background-image: url("rock.png");
+                background-image: url("https://i.ibb.co/hyMtpZp/rock.png");
                 background-size: cover;
                 grid-area: c;
+            }
+            .playerPaper {
+                background-image: url("https://i.ibb.co/415xggB/paper.png");
+                background-size: cover;
+                grid-area: e;
+                justify-self: end;
+            }
+            .playerScissors {
+                background-image: url("https://i.ibb.co/cXRN3Q3/scissors.png");
+                background-size: cover;
+                grid-area: i;
             }
             .playerRock:focus, .playerPaper:focus, .playerScissors:focus {
                 outline: 0;
@@ -331,17 +342,6 @@ body {
             .playerRock:hover, .playerPaper:hover, .playerScissors:hover {
                 cursor: pointer;
                 box-shadow: 5px 5px 8px rgb(55, 29, 116);
-            }
-            .playerPaper {
-                background-image: url("paper.png");
-                background-size: cover;
-                grid-area: e;
-                justify-self: end;
-            }
-            .playerScissors {
-                background-image: url("scissors.png");
-                background-size: cover;
-                grid-area: i;
             }
 
         /* right button container  */
