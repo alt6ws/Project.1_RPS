@@ -1,6 +1,6 @@
 body {
-    background-image: linear-gradient(to bottom left, rgb(29, 29, 104), rgb(83, 30, 30));
     display: grid;
+    background-color: #004853;
     position: relative;
 }
 /* ruleset overlay */
@@ -21,7 +21,7 @@ body {
         font-size: 30px;
         font-weight: 800;
         color: white;
-        text-decoration: underline rosybrown;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
     #rulesetscont {
@@ -31,8 +31,9 @@ body {
         grid-template-rows: repeat(2, auto);
         height: 520px;
         width: 350px;
-        background-image: linear-gradient(to bottom left, lightcoral, rgb(65, 117, 214));
-        border: 4px solid mediumpurple;
+        background-color: #037888;
+        border: 4px solid #f8b9cd;
+        border-radius: 8px;
         justify-content: space-around;
         align-items: center;
     }
@@ -57,18 +58,24 @@ body {
         width: 120px;
         padding: 4px;
         margin: 8px;
-        background-color: lemonchiffon;
+        background-color: #E492AC;
         box-shadow: 2px 2px 4px black;
         border: 2px solid rgba(17, 13, 94, 0.8);
         border-radius: 8px;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 600;
-        font-style: italic;
+        text-shadow: 1px 1px 1px black;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     #rulesetscont .rulesets:hover {
-        background-color: rgb(219, 178, 75);
-        border: 3px solid rgb(8, 5, 71);
+        background-color: #f8b9cd;
+        border: 2px solid rgb(13, 8, 104);
         border-radius: 12px;
+        text-shadow: none;
+        box-shadow: 3px 3px 5px black;
+        color: black;
+        cursor: pointer;
     }
     #rulesetscont input {
         margin: 8px;
@@ -76,10 +83,12 @@ body {
         margin-left: 0;
         padding: 4px;
         height: 60px;
-        background-color: lemonchiffon;
+        background-color: #E492AC;
+        border: 2px solid rgb(13, 8 ,104);
         box-shadow: 2px 2px 2px black;
         border-radius: 9px;
         font-size: 14px;
+        font-style: bold;
     }
     .customroundsdiv, .customscorediv {
         grid-column: span 2;
@@ -109,40 +118,49 @@ body {
         width: 340px;
         justify-content: center;
         align-items: center;
-        background-image:linear-gradient(to top right, rgb(252, 138, 138), rgb(50, 109, 219));
-        border: 5px solid mediumpurple;
+        background-color: #037888;
+        border: 4px solid #f8b9cd;
+        border-radius: 8px;
     }
     #didyouwin {
-        font-size: 2.6rem;
-        text-shadow: 5px 5px 4px mediumpurple;
-        color: rgb(133, 62, 37);
+        font-size: 2.8rem;
+        color: white;
         grid-column: span 2;
-        font-family: 'Kalam';
+        font-style: italic;
+        text-shadow: 2px 2px 2px black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     #finalscore {
         grid-column: span 2;
-        color: rgb(54, 31, 31);
-        font-family: 'Merienda';
+        color: rgb(255, 255, 255);
+        font-size: 2.2rem;
+        line-height: 60px;
+        text-shadow: 2px 2px 2px black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     #finalscoreresult {
-        font-size: 1.7rem;
-        background-color: rgba(141, 13, 94, 0.507);
-        border-radius: 6px;
+        font-size: 2.3rem;
+        background-color: #f8b9cd;
+        text-shadow: 2px 2px 2px black;
+        border-radius: 4px;
+        padding: 5px;
     }
     #endofgamecont button {
         height: 70px;
         border-radius: 10px;
-        box-shadow: 3px 4px 4px rgb(92, 92, 145);
-        background-color: rgba(255, 228, 181, 0.733);
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        box-shadow: 2px 1px 2px rgb(0, 0, 0);
+        background-color: #E492AC;
         font-size: 1.15rem;
-        font-style: italic;
-        color: rgb(75, 30, 117);
-        text-shadow: 1px 1px rgb(212, 156, 191)
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 550;
+        color: white;
+        text-shadow: 1px 1px 1px black;
     }
     #endofgamecont button:hover {
-        background-color: rgb(255, 249, 218);
-        box-shadow: 5px 6px 4px rgb(92, 92, 145);
+        background-color: #f8b9cd;
+        color: black;
+        box-shadow: 4px 5px 4px black;
+        text-shadow: none;
     }
     #playagain {
         cursor: pointer;
@@ -159,40 +177,38 @@ body {
         grid-template-rows: 1fr 5fr;
         grid-template-columns: auto;
         justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto 0 auto;
         min-width: 350px;
         max-width: 80vw;
-        height: 98vh;
+        height: 97vh;
         border-radius: 12px;
-        border: 3px solid mediumpurple;
-        background-image: linear-gradient(to bottom right, rgb(172, 177, 165) 0%, rgb(184, 116, 123) 50%, rgb(112, 64, 209) 100%);
+        border: 4px solid #f8b9cd;
+        background-color: #037888;
 }
 
 /* header */
 
     #header {
         display:flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-direction: column;
         align-items: center;
+    }
+    #header h1 {
+        margin-bottom: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: bold;
+        font-size: 2.2rem;
+        text-shadow: 2px 2px 1px black;
+        color: #ffffffdc;
     }
     #header h3 {
         font-weight: 900;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 1.6rem;
-        margin-top: 40px;
-        color: rgb(95, 0, 79);
-    }
-    #header h1 {
-        background-color: #f3ec78;
-        background-image: linear-gradient(90deg, #531abd 0%, #2499bd 50%, #880661 100%);
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        -moz-text-fill-color: transparent;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 1px black;
+        margin-top: 0;
+        color: #ffffffa6;
     }
 /* playarea */
 
@@ -203,76 +219,90 @@ body {
         grid-template-areas: 
         "janken janken"
         "player computer";
-        }
+        background-color: #037888;
+        border-radius: 8px;
+    }
 
 /* score/ruleset/round */
 
         #roundjanken {
-            border-bottom: 4px solid rgba(0, 1, 54,0.5);
+            border-bottom: 4px solid #f8b9cd;
             grid-area: janken;
             text-align: center;
             display: grid;
-            grid-template-rows: auto auto;
+            grid-template-rows: auto auto auto;
             grid-template-columns: auto auto;
             align-items: center;
         }
         #roundjanken .jankenbuttons {
             margin-left: 2vw;
-            font-weight: 540;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-            background-color: rgb(189, 189, 247);
-            border: 2px solid rgb(105, 105, 175);
-            padding: 3px;
-            height: 55px;
-            border-radius: 5px;
-            box-shadow: 1px 1px 2px rgb(60, 60, 85);
             justify-self: start;
         }
-        #navother {
-            font-weight: 540;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-            background-color: rgb(189, 189, 247);
-            border: 2px solid rgb(105, 105, 175);
+        .jankenbuttons, #navother {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 740;
+            font-size: 14px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            background-color: #E492AC;
             padding: 3px;
-            height: 55px;
+            height: 60px;
+            width: auto;
             border-radius: 5px;
-            box-shadow: 1px 1px 2px rgb(60, 60, 85);
+        }
+        .jankenbuttons:hover, #navother:hover {
+            background-color: #f8b9cd;
+            box-shadow: 2px 2px 2px #000000;
+            text-shadow: none;
+            color: black;
+            cursor: pointer;
+        }
+        #spanrule {
+            font-size: 17px;
+        }
+        #navother {
             justify-self: end;
             margin-right: 2vw;
+            width: 87px;
         }
         #roundjanken #score, #roundnumber {
             grid-column: span 2;
         }
         #roundnumber {
-            color: rgb(17, 42, 43);
+            color: rgb(255, 255, 255);
             justify-self: center;
-            border: 3px solid rgb(58, 52, 107);
+            border: 3px solid #f8b9cd;
             font-family: 'Gruppo';
             font-size: 23px;
             border-radius: 7px;
-            padding: 3px;
+            padding: 8px;
             margin-top: 10px;
             margin-bottom: 0;
+            text-shadow: 1px 1px 1px black;
         }
         #playerspan, #computerspan {
             line-height: 30px;
-            font-family: 'Merienda';
-            font-size: 16px;
+            font-family: 'Gruppo';
+            font-size: 21px;
+            font-style: bold;
+            color: white;
         }
         #playerScore, #computerScore {
             margin-bottom: 5px;
             margin-top: 0;
+            text-shadow: 1px 1px 1px black;
         }
         #scoreplayer {
-            color: rgb(84, 46, 173);
-            font-size: 22px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            color: rgb(255, 255, 255);
+            font-size: 23px;
+            text-shadow: 1px 1px 1px black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
         #scorecomputer {
-            color: rgb(121, 187, 196);
+            color: rgb(255, 255, 255);
             text-shadow: 1px 1px 1px black;
             font-size: 22px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
 /* buttons containers */
@@ -292,13 +322,13 @@ body {
         /* classes for color */
 
         .win {
-            background-color: rgb(93, 145, 16) !important;
+            background-color: rgb(98, 143, 31) !important;
         }
         .lose {
-            background-color: rgb(207, 18, 18) !important;
+            background-color: rgb(179, 25, 25) !important;
         }
         .tie {
-            background-color: rgba(44, 42, 189, 0.651) !important;
+            background-color: rgb(207, 207, 207) !important;
         }
         .hide {
             display: none;
@@ -308,15 +338,15 @@ body {
         #buttonsplayercontainer {
             grid-area: player;
             padding-right: 20px;
-            border-right: 3px solid rgba(0, 1, 54,0.5);
+            border-right: 3px solid #f8b9cd;
         }
 
         /* player buttons */
 
             #buttonsplayercontainer button {
                 border-radius: 50%;
-                border: 4px solid rgb(139, 103, 196);
-                background-color: transparent;
+                border: 4px solid #014550;
+                background-color: #f8b9cd;
                 width: 88px;
                 height: 88px;
             }
@@ -341,7 +371,7 @@ body {
             }
             .playerRock:hover, .playerPaper:hover, .playerScissors:hover {
                 cursor: pointer;
-                box-shadow: 5px 5px 8px rgb(55, 29, 116);
+                box-shadow: 1px 4px 2px rgb(16, 6, 41);
             }
 
         /* right button container  */
@@ -349,7 +379,7 @@ body {
         #buttonscomputercontainer {
             grid-area: computer;
             padding-left: 20px;
-            border-left: 3px solid rgba(0, 1, 54,0.5);
+            border-left: 3px solid #f8b9cd;
         }
 
         /* computer buttons */
@@ -368,7 +398,8 @@ body {
             }
         #buttonscomputercontainer img {
             border-radius: 50%;
-            border: 4px solid rgb(121, 187, 196);
+            border: 4px solid #014550;
+            background-color: #f8b9cd;
             width: 80px;
             height: 80px;
         }

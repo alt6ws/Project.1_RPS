@@ -160,7 +160,7 @@
     const ft5 = document.querySelector('.ft5');
     const customrounds = document.querySelector('.customrounds');
     const customscore = document.querySelector('.customscore');
-    const rulesetText = document.querySelector('#rulesettype')
+    const rulesetText = document.querySelector('#spanrule')
 
     const roundnumber = document.querySelector('#roundnumber');
     const scoreplayer = document.querySelector('#scoreplayer');
@@ -169,19 +169,19 @@
     let setRuleset = (rulesetType, optValue = 0) => {
         switch(rulesetType) {
             case 'single':
-                rulesetText.innerText = `Ruleset Type: \n Single`;
+                rulesetText.innerText = `Single`;
                 ruleset = 1;
                 break;
             case 'ft5':
-                rulesetText.innerText = `Ruleset Type: \n First to 5`;
+                rulesetText.innerText = `First to 5`;
                 ruleset = 5;
                 break;
             case 'customrounds':
-                rulesetText.innerText = `Ruleset Type: \n ${optValue} rounds`
+                rulesetText.innerText = `${optValue} rounds`
                 rulesetRound = optValue;
                 break;
             case 'customscore':
-                rulesetText.innerText = `Ruleset Type: \n First to ${optValue}`
+                rulesetText.innerText = `First to ${optValue}`
                 ruleset = optValue;
                 break;
         }          
@@ -189,7 +189,7 @@
         playerScore = 0;
         round = 1;
         finalResult = 0;
-        roundnumber.textContent = `Round #${round}`;
+        roundnumber.textContent = `Round # ${round}`;
         scoreplayer.textContent = `${playerScore}`;
         scorecomputer.textContent = `${computerScore}`;
         off();
@@ -223,7 +223,7 @@
                 if (computerScore == ruleset) finalResult = -1;
                 break;
         }
-        if(rulesetRound == round) {
+        if(rulesetRound == round - 1) {
             if(playerScore > computerScore) finalResult = 1;
             else if (computerScore > playerScore) finalResult = -1;
             else finalResult = 2;
@@ -243,7 +243,7 @@
 
     let gameEnd = resultValue => { 
         switch(resultValue) {
-            case 0:
+            case 2:
                 didyouwin.textContent = `You tied!`;
                 break;
             case 1:

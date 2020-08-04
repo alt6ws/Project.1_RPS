@@ -9,25 +9,25 @@
     </head>
     <body>
         <div id="rulesetoverlay">
-            <p id="gametype">SELECT GAME MODE:</p>
+            <p id="gametype">SELECT GAME MODE</p>
             <div id="rulesetscont">
                 <button id="closegametype" onclick="off()">X</button>
                 <button class="rulesets single">Single Game</button>
                 <button class="rulesets ft5">First to 5</button>
                 <div class="customroundsdiv">
-                    <button class="rulesets customrounds">Play # rounds: </button>
+                    <button class="rulesets customrounds">Play # rounds</button>
                     <input type="number" id="inputrounds" placeholder="1" min="1" pattern="[0-9]*" />
                 </div>
                 <div class="customscorediv">
-                    <button class="rulesets customscore">First to: </button>
+                    <button class="rulesets customscore">First to</button>
                     <input type="number" id="inputscore" placeholder="1" min="1" pattern="[0-9]*"/>
                 </div>
             </div>
         </div>
         <div id="endofgameoverlay">
             <div id="endofgamecont">
-                <h1 id="didyouwin">Win or Lose</h1>
-                <h2 id="finalscore">FINAL SCORE: <br>
+                <h1 id="didyouwin"></h1>
+                <h2 id="finalscore">FINAL SCORE <br>
                 <span id="finalscoreresult">here is the score</span>  </h2>
                 <button id="playagain">play again?</button>
                 <button id="playsomethingelse">play something else</button>
@@ -35,13 +35,14 @@
         </div>
         <div id="jankentime">
                 <div id="header">
-                    <h3>Time to Play a Game</h3>
                     <h1>ROCK PAPER SCISSORS</h1>
+                    <h3>Time to Play a Game</h3>
                 </div>
             <div id="playarea">
                 <div id="roundjanken">
-                    <button id="rulesettype" class="jankenbuttons" onclick="onbox()">RULESET TYPE</button>
-                    <button id="navother">other games</button>
+                    <button id="rulesettype" class="jankenbuttons" onclick="onbox()">Ruleset Type
+                    <br><span id="spanrule"></span></button>
+                    <button id="navother">Other <br>Games</button>
                     <h3 id="roundnumber">Round #</h3>
                     <h3 id="playerScore" class="scores"><span id="playerspan">Player</span><br> 
                         <span id="scoreplayer"></span></h3>
