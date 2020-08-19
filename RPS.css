@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
 body {
     display: grid;
     background-color: #004853;
@@ -403,6 +406,25 @@ body {
             width: 80px;
             height: 80px;
         }
+
+        footer {
+            position: fixed;
+            bottom: 5px;
+            right: 18px;
+        }
+        
+        footer a{
+            font-size: 16px;
+            text-decoration: none;
+            color: #f8b9cd;
+            font-family: 'Alata', sans-serif;
+        
+        }
+        
+        footer span {
+            font-family: 'Quicksand', sans-serif;
+        }
+
 
         /* media queries */
 
